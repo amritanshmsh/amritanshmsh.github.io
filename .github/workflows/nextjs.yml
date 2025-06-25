@@ -18,7 +18,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -33,11 +33,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build and Export static site
+      - name: Build and export static site
         run: |
           pnpm exec next build
           pnpm exec next export
-          touch out/.nojekyll  # Prevent GitHub Pages from breaking _next/ paths
+          touch out/.nojekyll
 
       - name: Upload static files
         uses: actions/upload-pages-artifact@v3
