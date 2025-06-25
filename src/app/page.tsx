@@ -3,7 +3,6 @@ import ExternalLink from "@/components/ExternalLink";
 import Section, { SubSection } from "@/components/Section";
 import SocialLinks from "@/components/SocialLinks";
 import StatusPill from "@/components/StatusPill";
-import { calculateAge } from "@/util";
 import profilePicture from "../../public/logo.png";
 
 export default function Home() {

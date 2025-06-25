@@ -1,15 +1,17 @@
 import type { NextConfig } from "next";
 
-export default {
-  experimental: {
-    ppr: true,
-    reactCompiler: true,
-  },
+const nextConfig: NextConfig = {
+  output: "export",
+  poweredByHeader: false,
+  reactStrictMode: true,
   logging: {
     fetches: {
       fullUrl: true,
     },
   },
-  poweredByHeader: false,
-  reactStrictMode: true,
-} satisfies NextConfig;
+  images: {
+    unoptimized: true,
+  },
+};
+
+export default nextConfig;
